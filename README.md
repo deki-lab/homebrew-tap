@@ -1,6 +1,8 @@
 # deki-lab Homebrew tap
 
 ```sh
+brew tap deki-lab/tap
+brew trust deki-lab/tap   # Homebrew 7+: third-party taps must be trusted
 brew install --cask deki-lab/tap/kubeport
 ```
 
