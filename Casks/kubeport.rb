@@ -1,6 +1,6 @@
 cask "kubeport" do
-  version "0.3.0"
-  sha256 "2b39194b35171489fe38070e6f85c91608db24b4675fcdc6b84dee8f48e3fa31"
+  version "0.4.0"
+  sha256 "f10f43b325aeaf76cc162cf6d157c7672bba14e5d00e98c5073c7e998b535341"
 
   url "https://github.com/deki-lab/Kubeport/releases/download/v#{version}/Kubeport-#{version}.dmg"
   name "Kubeport"
@@ -13,5 +13,8 @@ cask "kubeport" do
 
   uninstall quit: "fr.deki-lab.kubeport"
 
-  zap trash: "~/Library/Application Support/k8s_forwarder"
+  zap trash: [
+    "~/Library/Application Support/Kubeport",
+    "~/Library/Application Support/k8s_forwarder",
+  ]
 end
